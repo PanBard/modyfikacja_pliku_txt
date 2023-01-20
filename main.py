@@ -17,7 +17,7 @@ with codecs.open(nazwa_pliku_pierwotnego,'r',"utf-8") as file:
     numer_z_pliku =""
 
     for sentence in lines:
-        # print(sentence.find('[#'))
+        
         modyfikowane_zdanie = ""
         if sentence.find('[#') == 0:
             for x in range(len(sentence)) :
@@ -37,14 +37,7 @@ with codecs.open(nazwa_pliku_pierwotnego,'r',"utf-8") as file:
             plik_nowy.write(modyfikowane_zdanie)
         else: plik_nowy.write(sentence)
 
-        #     for x in range(sentence) :
-        #         if sentence.find(']') == x
-        #     print(sentence)
-        # else:
-        #     plik_nowy.write("")
-        #     licznik +=1
-        # if sentence.find(">>") == 0:
-        #     plik_nowy.write("["+str(licznik)+"]"+sentence)
+      
 
 
 plik_nowy.close()
